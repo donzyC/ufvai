@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}Get Involved{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
+        <div class="fade-in text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Get Involved</h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200">Join our community of AI innovators and educators</p>
+        </div>
+    </div>
+</section>
+
+<!-- Ways to Get Involved Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Student Opportunities -->
+            <div class="bg-white rounded-lg shadow-xl p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">For Students</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Join our AI Programming program</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Participate in AI research projects</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Attend workshops and seminars</span>
+                    </li>
+                </ul>
+                <div class="mt-8">
+                    <a href="/apply" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Industry Partners -->
+            <div class="bg-white rounded-lg shadow-xl p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">For Industry Partners</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Sponsor student projects</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Provide internship opportunities</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Collaborate on research initiatives</span>
+                    </li>
+                </ul>
+                <div class="mt-8">
+                    <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors">
+                        Partner With Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Events Section -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Upcoming Events</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">AI Workshop Series</h3>
+                <p class="text-gray-600 mb-4">Monthly workshops on various AI topics</p>
+                <p class="text-sm text-gray-500">Next session: April 15, 2024</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Industry Networking</h3>
+                <p class="text-gray-600 mb-4">Connect with AI industry leaders</p>
+                <p class="text-sm text-gray-500">Next event: May 1, 2024</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Research Showcase</h3>
+                <p class="text-gray-600 mb-4">Student research presentations</p>
+                <p class="text-sm text-gray-500">Next showcase: June 10, 2024</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

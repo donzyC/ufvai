@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
+        <div class="fade-in text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Welcome to UFV's AI Programming Department</h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200">Shaping the future of artificial intelligence education</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="/why-department" class="btn-primary">Learn More</a>
+                <a href="/apply" class="btn-secondary">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Features -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">Why Choose UFV's AI Programming Department?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card">
+                <i class="fas fa-graduation-cap text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Industry-Ready Curriculum</h3>
+                <p class="text-gray-600">Learn from industry experts and gain hands-on experience with the latest AI technologies and frameworks.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-laptop-code text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">State-of-the-Art Facilities</h3>
+                <p class="text-gray-600">Access to advanced computing resources and dedicated AI research laboratories.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Strong Industry Connections</h3>
+                <p class="text-gray-600">Network with leading tech companies and secure internships through our industry partnerships.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div class="fade-in">
+                <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
+                <p class="text-gray-600">Employment Rate</p>
+            </div>
+            <div class="fade-in">
+                <div class="text-4xl font-bold text-blue-600 mb-2">$85K</div>
+                <p class="text-gray-600">Average Starting Salary</p>
+            </div>
+            <div class="fade-in">
+                <div class="text-4xl font-bold text-blue-600 mb-2">15+</div>
+                <p class="text-gray-600">Industry Partners</p>
+            </div>
+            <div class="fade-in">
+                <div class="text-4xl font-bold text-blue-600 mb-2">100%</div>
+                <p class="text-gray-600">Hands-on Projects</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-20 bg-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-8">Ready to Shape the Future of AI?</h2>
+        <p class="text-xl mb-8">Join us in creating the next generation of AI innovators and leaders.</p>
+        <a href="/contact" class="btn-secondary inline-block">Get in Touch</a>
+    </div>
+</section>
+{% endblock %} 

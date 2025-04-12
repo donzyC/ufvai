@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}Problem & Opportunity{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
+        <div class="fade-in text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Problem & Opportunity</h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200">Understanding the challenges and possibilities in AI education</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="/plan" class="btn-primary">View Our Plan</a>
+                <a href="/contact" class="btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Current Gap Analysis -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">Current Educational Gap</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-600">The Challenge</h3>
+                <div class="space-y-4">
+                    <p class="text-gray-600">UFV currently lacks a dedicated program focused on AI programming and development, creating several challenges:</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span>Limited access to specialized AI education</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span>Students must travel to other institutions for AI-focused programs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span>Missed opportunities for local industry partnerships</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-600">Impact on Students</h3>
+                <div class="space-y-4">
+                    <p class="text-gray-600">The absence of an AI program affects students in multiple ways:</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-user-times text-red-500 mt-1 mr-3"></i>
+                            <span>Limited career opportunities in AI</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-user-times text-red-500 mt-1 mr-3"></i>
+                            <span>Reduced competitiveness in the job market</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-user-times text-red-500 mt-1 mr-3"></i>
+                            <span>Lack of hands-on AI project experience</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Opportunity Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">The Opportunity</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card">
+                <i class="fas fa-rocket text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Market Position</h3>
+                <p class="text-gray-600">Position UFV as a leader in AI education in Western Canada, attracting students and industry partners.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-handshake text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Industry Collaboration</h3>
+                <p class="text-gray-600">Create strong partnerships with tech companies and startups in the Fraser Valley region.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-bar text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Economic Impact</h3>
+                <p class="text-gray-600">Drive local economic growth through skilled graduates and research innovations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Competitive Advantage -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">Our Competitive Advantage</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-600">Unique Features</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Industry-Integrated Curriculum</span>
+                            <p class="text-gray-600">Real-world projects and case studies from partner companies</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Research Opportunities</span>
+                            <p class="text-gray-600">Access to cutting-edge AI research projects</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Professional Development</span>
+                            <p class="text-gray-600">Industry mentorship and networking events</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-600">Regional Benefits</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Local Talent Development</span>
+                            <p class="text-gray-600">Retain and attract tech talent in the Fraser Valley</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Economic Growth</span>
+                            <p class="text-gray-600">Support local tech industry development</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Community Impact</span>
+                            <p class="text-gray-600">Create opportunities for local businesses</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-20 bg-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-8">Be Part of the Solution</h2>
+        <p class="text-xl mb-8">Join us in bridging the AI education gap and shaping the future of technology education.</p>
+        <a href="/plan" class="btn-secondary inline-block">View Our Plan</a>
+    </div>
+</section>
+{% endblock %} 

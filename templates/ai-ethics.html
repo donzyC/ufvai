@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+
+{% block title %}AI, Ethics, and Society{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
+        <div class="fade-in text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">AI, Ethics, and Society</h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200">Exploring the ethical implications and societal impact of artificial intelligence</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="/ai-teaching" class="btn-primary">Learn About Teaching</a>
+                <a href="/contact" class="btn-secondary">Join the Discussion</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Current State of AI -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">AI in Business Today</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-600">Current Applications</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-robot text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Automation & Efficiency</span>
+                            <p class="text-gray-600">Streamlining operations and reducing manual tasks</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-chart-line text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Data Analytics</span>
+                            <p class="text-gray-600">Advanced insights and predictive modeling</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-comments text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Customer Experience</span>
+                            <p class="text-gray-600">Personalized interactions and support</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-600">Industry Impact</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-industry text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Manufacturing</span>
+                            <p class="text-gray-600">Smart factories and predictive maintenance</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-hospital text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Healthcare</span>
+                            <p class="text-gray-600">Diagnostic assistance and treatment planning</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-shopping-cart text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Retail</span>
+                            <p class="text-gray-600">Inventory management and customer insights</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ethical Considerations -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">Ethical Considerations</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card">
+                <i class="fas fa-balance-scale text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Fairness & Bias</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• Algorithmic bias prevention</li>
+                    <li>• Fair representation in training data</li>
+                    <li>• Equal opportunity in AI systems</li>
+                    <li>• Regular bias audits and monitoring</li>
+                </ul>
+            </div>
+            <div class="card">
+                <i class="fas fa-user-shield text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Privacy & Security</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• Data protection measures</li>
+                    <li>• Secure AI model deployment</li>
+                    <li>• User consent and transparency</li>
+                    <li>• Compliance with regulations</li>
+                </ul>
+            </div>
+            <div class="card">
+                <i class="fas fa-handshake text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Accountability</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• Clear responsibility chains</li>
+                    <li>• Ethical decision-making frameworks</li>
+                    <li>• Regular ethical reviews</li>
+                    <li>• Stakeholder involvement</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Challenges and Misconceptions -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">Challenges and Misconceptions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-600">Common Misconceptions</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">AI Will Replace All Jobs</span>
+                            <p class="text-gray-600">AI will augment human capabilities, not replace them entirely</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">AI is Always Objective</span>
+                            <p class="text-gray-600">AI systems can inherit and amplify human biases</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">AI Understands Like Humans</span>
+                            <p class="text-gray-600">AI processes data differently from human understanding</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-600">Key Challenges</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Data Quality</span>
+                            <p class="text-gray-600">Ensuring diverse and representative training data</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Regulatory Compliance</span>
+                            <p class="text-gray-600">Navigating complex legal and ethical frameworks</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Technical Limitations</span>
+                            <p class="text-gray-600">Addressing current AI system constraints</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Future of AI and Human Collaboration -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">Future of AI and Human Collaboration</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card">
+                <i class="fas fa-brain text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Enhanced Decision Making</h3>
+                <p class="text-gray-600">AI systems supporting human judgment with data-driven insights and analysis.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Creative Collaboration</h3>
+                <p class="text-gray-600">Combining human creativity with AI capabilities for innovative solutions.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-graduation-cap text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Continuous Learning</h3>
+                <p class="text-gray-600">AI systems that adapt and improve through human feedback and interaction.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-20 bg-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-8">Shape the Future of AI</h2>
+        <p class="text-xl mb-8">Join us in developing responsible and ethical AI solutions.</p>
+        <a href="/contact" class="btn-secondary inline-block">Get Involved</a>
+    </div>
+</section>
+{% endblock %} 

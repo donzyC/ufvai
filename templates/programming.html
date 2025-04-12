@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block title %}Programming{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
+        <div class="fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Programming Languages for AI</h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200">Discover the essential programming languages and frameworks for AI development</p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Languages -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">Core Programming Languages</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card">
+                <i class="fab fa-python text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Python</h3>
+                <p class="text-gray-600 mb-4">The most popular language for AI and machine learning due to its simplicity and extensive libraries.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• NumPy for numerical computing</li>
+                    <li>• Pandas for data manipulation</li>
+                    <li>• Scikit-learn for machine learning</li>
+                    <li>• TensorFlow and PyTorch for deep learning</li>
+                </ul>
+            </div>
+            <div class="card">
+                <i class="fab fa-java text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">Java</h3>
+                <p class="text-gray-600 mb-4">A robust language for enterprise AI applications with strong performance and scalability.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• DL4J (Deep Learning for Java)</li>
+                    <li>• Weka for machine learning</li>
+                    <li>• JavaML for data mining</li>
+                    <li>• Strong integration with big data tools</li>
+                </ul>
+            </div>
+            <div class="card">
+                <i class="fas fa-code text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-4">R</h3>
+                <p class="text-gray-600 mb-4">Specialized for statistical analysis and data visualization, essential for AI research.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• caret for machine learning</li>
+                    <li>• ggplot2 for visualization</li>
+                    <li>• dplyr for data manipulation</li>
+                    <li>• Excellent for statistical modeling</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Frameworks and Libraries -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">Essential Frameworks & Libraries</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-600">Deep Learning Frameworks</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-brain text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">TensorFlow</span>
+                            <p class="text-gray-600">Google's open-source framework for machine learning and deep neural networks</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-fire text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">PyTorch</span>
+                            <p class="text-gray-600">Facebook's deep learning framework with dynamic computational graphs</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-project-diagram text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Keras</span>
+                            <p class="text-gray-600">High-level neural networks API, now part of TensorFlow</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-600">Machine Learning Libraries</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-cogs text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Scikit-learn</span>
+                            <p class="text-gray-600">Comprehensive library for traditional machine learning algorithms</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-chart-line text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">XGBoost</span>
+                            <p class="text-gray-600">Optimized gradient boosting library for structured/tabular data</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-robot text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-semibold">Hugging Face Transformers</span>
+                            <p class="text-gray-600">State-of-the-art NLP models and tools</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Learning Path -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">Learning Path</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3 class="text-xl font-semibold mb-2">1. Python Fundamentals</h3>
+                <p class="text-gray-600">Start with Python basics, data structures, and control flow</p>
+            </div>
+            <div class="timeline-item">
+                <h3 class="text-xl font-semibold mb-2">2. Data Science Libraries</h3>
+                <p class="text-gray-600">Learn NumPy, Pandas, and Matplotlib for data manipulation and visualization</p>
+            </div>
+            <div class="timeline-item">
+                <h3 class="text-xl font-semibold mb-2">3. Machine Learning Basics</h3>
+                <p class="text-gray-600">Study Scikit-learn for traditional ML algorithms and techniques</p>
+            </div>
+            <div class="timeline-item">
+                <h3 class="text-xl font-semibold mb-2">4. Deep Learning</h3>
+                <p class="text-gray-600">Explore TensorFlow or PyTorch for neural networks and deep learning</p>
+            </div>
+            <div class="timeline-item">
+                <h3 class="text-xl font-semibold mb-2">5. Specialized AI Applications</h3>
+                <p class="text-gray-600">Focus on NLP, computer vision, or reinforcement learning based on your interests</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-20 bg-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-8">Ready to Start Your AI Programming Journey?</h2>
+        <p class="text-xl mb-8">Join our program and learn from industry experts.</p>
+        <a href="/contact" class="btn-secondary inline-block">Apply Now</a>
+    </div>
+</section>
+{% endblock %} 
