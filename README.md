@@ -50,6 +50,21 @@ python app.py
 http://localhost:5000
 ```
 
+## Deployment to GitHub Pages
+
+This project is configured for deployment to GitHub Pages:
+
+1. Push your code to a GitHub repository
+2. Go to the repository settings
+3. Navigate to "Pages" in the sidebar
+4. Under "Source", select "GitHub Actions"
+5. The site will be automatically deployed when you push to the main branch
+
+The deployed site will be available at:
+```
+https://<your-github-username>.github.io/<repository-name>/
+```
+
 ## Project Structure
 
 ```
@@ -64,6 +79,8 @@ ufv-ai-proposal/
 │   ├── base.html        # Base template
 │   ├── index.html       # Home page
 │   └── ...             # Other pages
+├── .github/              # GitHub configuration
+│   └── workflows/        # GitHub Actions workflows
 └── README.md            # Project documentation
 ```
 

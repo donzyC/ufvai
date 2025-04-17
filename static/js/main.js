@@ -84,4 +84,53 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+});
+
+// Mobile menu functionality
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('show');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+            mobileMenu.classList.remove('show');
+        }
+    });
+}
+
+// Update active link for mobile menu
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 60) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    mobileNavLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Chart resizing
+window.addEventListener('resize', function() {
+    // Get all chart instances
+    const charts = Chart.instances;
+    
+    // Resize each chart
+    for (let id in charts) {
+        charts[id].resize();
+    }
 }); 

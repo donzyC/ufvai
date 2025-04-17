@@ -150,12 +150,32 @@
     border-radius: 50%;
 }
 
-/* Charts */
+/* Chart Container */
 .chart-container {
     background-color: white;
-    padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.chart-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.bar-chart {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.5rem;
+    padding-top: 3.5rem; /* Space for the title */
 }
 
 /* Form Elements */
@@ -639,22 +659,6 @@
     margin: 2rem 0;
 }
 
-.chart-container {
-    width: 100%;
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.bar-chart {
-    width: 100%;
-    height: 400px;
-    position: relative;
-}
-
 .bar {
     fill: #3b82f6;
     transition: fill 0.3s ease;
@@ -669,19 +673,10 @@
     fill: #4b5563;
 }
 
-.chart-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #1f2937;
-}
-
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
+    gap: 1.5rem;
 }
 
 .benefit-card {
@@ -792,4 +787,33 @@
     .benefits-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Mobile Navigation */
+.mobile-nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #4B5563;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+}
+
+.mobile-nav-link:hover {
+    background-color: #EFF6FF;
+    color: #2563EB;
+}
+
+.mobile-nav-link.active {
+    background-color: #EFF6FF;
+    color: #2563EB;
+}
+
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+#mobile-menu.show {
+    display: block;
 } 
