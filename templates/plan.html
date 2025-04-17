@@ -231,6 +231,56 @@
     </div>
 </section>
 
+<!-- Cost-Benefit Analysis -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">Cost-Benefit Analysis</h2>
+        <div class="chart-container">
+            <h3 class="chart-title">Projected Costs vs. Revenue (5-Year Forecast)</h3>
+            <canvas id="costBenefitChart" class="bar-chart"></canvas>
+        </div>
+    </div>
+</section>
+
+<!-- Key Benefits -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">Key Benefits</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3 class="benefit-title">For Students</h3>
+                <p class="benefit-description">Access to cutting-edge AI education, industry connections, and research opportunities</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h3 class="benefit-title">For UFV</h3>
+                <p class="benefit-description">Enhanced reputation, research output, and industry partnerships</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3 class="benefit-title">For Industry</h3>
+                <p class="benefit-description">Access to skilled graduates, research collaboration, and innovation</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Smart Campus Vision -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-header">Smart Campus Vision</h2>
+        <img src="{{ url_for('static', filename='images/smart-campus.jpg') }}" alt="UFV Smart Campus AI Lab" class="campus-image">
+        <p class="image-caption">Conceptual rendering of the future AI Programming Department facilities at UFV</p>
+    </div>
+</section>
+
 <!-- Call to Action -->
 <section class="py-20 bg-blue-600 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -239,4 +289,54 @@
         <a href="/contact" class="btn-secondary inline-block">Get Involved</a>
     </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('costBenefitChart').getContext('2d');
+    const costBenefitChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
+            datasets: [{
+                label: 'Costs ($M)',
+                data: [2.5, 3.0, 3.2, 3.5, 3.8],
+                backgroundColor: 'rgba(239, 68, 68, 0.7)',
+                borderColor: 'rgb(239, 68, 68)',
+                borderWidth: 1
+            }, {
+                label: 'Revenue ($M)',
+                data: [1.8, 3.5, 4.2, 5.0, 6.0],
+                backgroundColor: 'rgba(34, 197, 94, 0.7)',
+                borderColor: 'rgb(34, 197, 94)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Amount ($M)'
+                    }
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: '5-Year Financial Projection'
+                },
+                legend: {
+                    position: 'top'
+                }
+            }
+        }
+    });
+});
+</script>
 {% endblock %} 
