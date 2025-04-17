@@ -246,27 +246,33 @@
 <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="section-header">Key Benefits</h2>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fas fa-user-graduate"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="benefit-title">For Students</h3>
+                    <p class="benefit-description">Access to cutting-edge AI education, industry connections, and research opportunities</p>
                 </div>
-                <h3 class="benefit-title">For Students</h3>
-                <p class="benefit-description">Access to cutting-edge AI education, industry connections, and research opportunities</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 class="benefit-title">For UFV</h3>
+                    <p class="benefit-description">Enhanced reputation, research output, and industry partnerships</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="benefit-title">For Industry</h3>
+                    <p class="benefit-description">Access to skilled graduates, research collaboration, and innovation</p>
+                </div>
             </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fas fa-university"></i>
-                </div>
-                <h3 class="benefit-title">For UFV</h3>
-                <p class="benefit-description">Enhanced reputation, research output, and industry partnerships</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fas fa-industry"></i>
-                </div>
-                <h3 class="benefit-title">For Industry</h3>
-                <p class="benefit-description">Access to skilled graduates, research collaboration, and innovation</p>
+            <div class="chart-container">
+                <h3 class="chart-title">Benefits Distribution</h3>
+                <canvas id="benefitsPieChart" class="bar-chart"></canvas>
             </div>
         </div>
     </div>
@@ -276,8 +282,10 @@
 <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="section-header">Smart Campus Vision</h2>
-        <img src="{{ url_for('static', filename='images/smart-campus.jpg') }}" alt="UFV Smart Campus AI Lab" class="campus-image">
-        <p class="image-caption">Conceptual rendering of the future AI Programming Department facilities at UFV</p>
+        <div class="campus-image-container">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZjBmNGY4Ii8+PHRleHQgeD0iNjAwIiB5PSIzMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iIzY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UFZUIEFJIFByb2dyYW1taW5nIERlcGFydG1lbnQ8L3RleHQ+PHRleHQgeD0iNjAwIiB5PSIzNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TW9kZXJuIEFJIExhYiBGYWNpbGl0aWVzPC90ZXh0Pjwvc3ZnPg==" alt="UFV Smart Campus AI Lab" class="campus-image">
+            <p class="image-caption">Conceptual rendering of the future AI Programming Department facilities at UFV</p>
+        </div>
     </div>
 </section>
 
@@ -295,6 +303,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Cost-Benefit Chart
     const ctx = document.getElementById('costBenefitChart').getContext('2d');
     const costBenefitChart = new Chart(ctx, {
         type: 'bar',
@@ -333,6 +342,47 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 legend: {
                     position: 'top'
+                }
+            }
+        }
+    });
+    
+    // Benefits Pie Chart
+    const pieCtx = document.getElementById('benefitsPieChart').getContext('2d');
+    const benefitsPieChart = new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Students', 'UFV', 'Industry'],
+            datasets: [{
+                data: [40, 30, 30],
+                backgroundColor: [
+                    'rgba(59, 130, 246, 0.7)',
+                    'rgba(16, 185, 129, 0.7)',
+                    'rgba(245, 158, 11, 0.7)'
+                ],
+                borderColor: [
+                    'rgb(59, 130, 246)',
+                    'rgb(16, 185, 129)',
+                    'rgb(245, 158, 11)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'right'
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const label = context.label || '';
+                            const value = context.raw || 0;
+                            return `${label}: ${value}%`;
+                        }
+                    }
                 }
             }
         }
