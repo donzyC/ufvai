@@ -67,24 +67,41 @@ if (contactForm) {
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 
-window.addEventListener('scroll', () => {
-    let current = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 60) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
+// Set active state based on current page
+const currentPath = window.location.pathname;
+navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (linkPath === currentPath) {
+        link.classList.add('active');
+    } else {
         link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
-        }
-    });
+    }
 });
+
+// Handle section highlighting on scroll (only for home page)
+if (currentPath === '/' || currentPath === '/index.html') {
+    window.addEventListener('scroll', () => {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - 60) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href');
+            if (linkPath.startsWith('#')) {
+                link.classList.remove('active');
+                if (linkPath.slice(1) === current) {
+                    link.classList.add('active');
+                }
+            }
+        });
+    });
+}
 
 // Mobile menu functionality
 const mobileMenuButton = document.getElementById('mobile-menu-button');
