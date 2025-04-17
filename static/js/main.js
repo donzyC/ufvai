@@ -133,4 +133,24 @@ window.addEventListener('resize', function() {
     for (let id in charts) {
         charts[id].resize();
     }
+});
+
+// Timeline animations
+function animateTimeline() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    timelineItems.forEach((item, index) => {
+        // Add a delay based on the index to create a staggered effect
+        setTimeout(() => {
+            item.classList.add('fade-in');
+        }, index * 200);
+    });
+}
+
+// Call the animation function when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // ... existing code ...
+    
+    // Animate timeline items
+    animateTimeline();
 }); 

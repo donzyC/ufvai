@@ -128,26 +128,142 @@
     overflow-x: auto;
 }
 
-/* Timeline */
-.timeline {
+/* Timeline Styles */
+.timeline-container {
     position: relative;
-    padding-left: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #e5e7eb;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 3px;
 }
 
 .timeline-item {
+    padding: 10px 40px;
     position: relative;
-    padding-bottom: 2rem;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.timeline-item::before {
+.timeline-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-dot {
+    width: 25px;
+    height: 25px;
+    background-color: #2563eb;
+    border-radius: 50%;
+    position: absolute;
+    right: -17px;
+    top: 15px;
+    z-index: 1;
+    box-shadow: 0 0 0 4px white, 0 0 0 8px #2563eb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -17px;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px white, 0 0 0 12px #2563eb;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+.timeline-details {
+    color: #4b5563;
+}
+
+.timeline-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-list li::before {
     content: '';
     position: absolute;
-    left: -2rem;
-    top: 0;
-    width: 1rem;
-    height: 1rem;
-    background-color: #2563EB;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background-color: #2563eb;
     border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-container::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-dot {
+        left: 17px;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 17px;
+    }
 }
 
 /* Chart Container */
@@ -579,76 +695,6 @@
 .guest-access-details li {
     margin-bottom: 0.5rem;
     line-height: 1.6;
-}
-
-.timeline-container {
-    margin: 3rem 0;
-    position: relative;
-}
-
-.timeline-container::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    background: #e0e0e0;
-}
-
-.timeline-item {
-    margin-bottom: 2rem;
-    position: relative;
-    width: 100%;
-}
-
-.timeline-date {
-    background: #2c3e50;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.timeline-content {
-    background: #fff;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-left: 2rem;
-}
-
-.timeline-content h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-}
-
-.timeline-content ul {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-}
-
-.timeline-content li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-    color: #666;
-}
-
-@media (max-width: 768px) {
-    .access-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .timeline-container::before {
-        left: 0;
-    }
-    
-    .timeline-content {
-        margin-left: 1.5rem;
-    }
 }
 
 /* Visual Elements Styles */
