@@ -1,0 +1,222 @@
+{% extends "base.html" %}
+
+{% block title %}Intranet Integration & Access Control{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1>Intranet Integration & Access Control</h1>
+        <p>Seamlessly connecting with UFV's existing systems while maintaining security and control</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <h2>UFV Intranet Integration</h2>
+        <p>Our AI Programming Department will integrate seamlessly with UFV's existing intranet infrastructure, leveraging the university's Wide Area Network (WAN) to provide secure, efficient access to resources and services.</p>
+        
+        <div class="integration-card">
+            <h3>Integration Architecture</h3>
+            <div class="integration-details">
+                <p>The integration architecture follows a layered approach to ensure compatibility, security, and scalability:</p>
+                <ol>
+                    <li><strong>Authentication Layer:</strong> Single Sign-On (SSO) integration with UFV's identity management system</li>
+                    <li><strong>Data Layer:</strong> Secure data exchange with existing university databases</li>
+                    <li><strong>Application Layer:</strong> API-based integration with existing university applications</li>
+                    <li><strong>Presentation Layer:</strong> Consistent user interface aligned with UFV's design standards</li>
+                </ol>
+                
+                <div class="architecture-diagram">
+                    <img src="{{ url_for('static', filename='images/integration-architecture.png') }}" alt="Integration Architecture Diagram">
+                </div>
+            </div>
+        </div>
+        
+        <div class="integration-card">
+            <h3>WAN Integration Benefits</h3>
+            <div class="integration-details">
+                <p>By leveraging UFV's existing WAN infrastructure, our department will benefit from:</p>
+                <ul>
+                    <li><strong>High-Speed Connectivity:</strong> Access to the university's high-bandwidth network for AI model training and data processing</li>
+                    <li><strong>Reduced Infrastructure Costs:</strong> Utilization of existing network resources rather than building new infrastructure</li>
+                    <li><strong>Enhanced Security:</strong> Benefit from the university's comprehensive security measures and protocols</li>
+                    <li><strong>Seamless Resource Sharing:</strong> Easy access to shared computing resources and storage systems</li>
+                    <li><strong>Simplified Maintenance:</strong> Centralized network management and support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <h2>Access Control System</h2>
+        <p>Our access control system ensures that resources are available to authorized users while protecting sensitive information and systems.</p>
+        
+        <div class="access-grid">
+            <div class="access-card">
+                <h3>User Authentication</h3>
+                <div class="access-details">
+                    <p>We implement a multi-factor authentication system that integrates with UFV's existing identity management:</p>
+                    <ul>
+                        <li>Single Sign-On (SSO) with UFV credentials</li>
+                        <li>Two-factor authentication for sensitive operations</li>
+                        <li>Biometric authentication options for physical access</li>
+                        <li>Session management and timeout policies</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="access-card">
+                <h3>Role-Based Access Control</h3>
+                <div class="access-details">
+                    <p>Access to resources is granted based on user roles and responsibilities:</p>
+                    <ul>
+                        <li>Student access to course materials and assignments</li>
+                        <li>Faculty access to teaching resources and student data</li>
+                        <li>Administrator access to system configuration and user management</li>
+                        <li>Guest access to public resources only</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="access-card">
+                <h3>Resource Protection</h3>
+                <div class="access-details">
+                    <p>Advanced security measures protect sensitive resources and data:</p>
+                    <ul>
+                        <li>Encryption for data at rest and in transit</li>
+                        <li>Network segmentation to isolate sensitive systems</li>
+                        <li>Intrusion detection and prevention systems</li>
+                        <li>Regular security audits and penetration testing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="access-card">
+                <h3>Audit and Compliance</h3>
+                <div class="access-details">
+                    <p>Comprehensive logging and monitoring ensure accountability:</p>
+                    <ul>
+                        <li>Detailed access logs for all system interactions</li>
+                        <li>Automated alerts for suspicious activities</li>
+                        <li>Regular compliance reviews and reporting</li>
+                        <li>Data retention policies aligned with university standards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Guest Access Management</h2>
+        <p>We provide controlled access for guests who don't have student or faculty IDs, allowing them to contribute to our community while maintaining security.</p>
+        
+        <div class="guest-access-card">
+            <h3>Guest Registration Process</h3>
+            <div class="guest-access-details">
+                <p>Guests can access our resources through a structured registration process:</p>
+                <ol>
+                    <li>Complete an online registration form with basic information</li>
+                    <li>Verify email address through a confirmation link</li>
+                    <li>Accept terms of service and usage policies</li>
+                    <li>Receive temporary guest credentials with limited access</li>
+                    <li>Credentials expire after a set period (typically 30 days)</li>
+                    <li>Option to request extended access with justification</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="guest-access-card">
+            <h3>Guest Access Levels</h3>
+            <div class="guest-access-details">
+                <p>Different levels of access are available based on guest type and purpose:</p>
+                <ul>
+                    <li><strong>Public Access:</strong> Available to all guests without registration (public information only)</li>
+                    <li><strong>Basic Guest:</strong> Access to public resources and limited course materials</li>
+                    <li><strong>Collaborator:</strong> Access to specific project resources for external partners</li>
+                    <li><strong>Guest Lecturer:</strong> Temporary elevated access for guest speakers and industry experts</li>
+                    <li><strong>Alumni:</strong> Special access level for UFV graduates with ongoing interest in the department</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="guest-access-card">
+            <h3>Contribution Mechanisms</h3>
+            <div class="guest-access-details">
+                <p>Guests can contribute to our community through various channels:</p>
+                <ul>
+                    <li><strong>Discussion Forums:</strong> Participate in topic-specific discussions</li>
+                    <li><strong>Resource Sharing:</strong> Submit relevant articles, papers, or code examples</li>
+                    <li><strong>Feedback System:</strong> Provide input on courses and resources</li>
+                    <li><strong>Guest Lectures:</strong> Share expertise through scheduled presentations</li>
+                    <li><strong>Collaborative Projects:</strong> Participate in open-source initiatives</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <h2>Implementation Timeline</h2>
+        <p>The integration with UFV's intranet will be implemented in phases to ensure smooth transition and minimal disruption:</p>
+        
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-date">Phase 1 (Months 1-3)</div>
+                <div class="timeline-content">
+                    <h3>Planning and Design</h3>
+                    <ul>
+                        <li>Requirements gathering and analysis</li>
+                        <li>Integration architecture design</li>
+                        <li>Security protocol development</li>
+                        <li>Stakeholder consultation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">Phase 2 (Months 4-6)</div>
+                <div class="timeline-content">
+                    <h3>Core Integration</h3>
+                    <ul>
+                        <li>Authentication system implementation</li>
+                        <li>Database integration</li>
+                        <li>API development</li>
+                        <li>Initial user interface alignment</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">Phase 3 (Months 7-9)</div>
+                <div class="timeline-content">
+                    <h3>Access Control Implementation</h3>
+                    <ul>
+                        <li>Role-based access control setup</li>
+                        <li>Guest access system development</li>
+                        <li>Security measures implementation</li>
+                        <li>Audit system configuration</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">Phase 4 (Months 10-12)</div>
+                <div class="timeline-content">
+                    <h3>Testing and Deployment</h3>
+                    <ul>
+                        <li>Integration testing</li>
+                        <li>Security testing and validation</li>
+                        <li>User acceptance testing</li>
+                        <li>Gradual rollout to users</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

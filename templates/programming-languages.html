@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+
+{% block title %}Programming Languages Analysis{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1>Programming Languages for AI Development</h1>
+        <p>A comprehensive analysis of programming languages for our AI curriculum</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <h2>Language Selection Criteria</h2>
+        <p>Our selection of programming languages is based on:</p>
+        <ul>
+            <li>Industry demand and job market relevance</li>
+            <li>AI and machine learning capabilities</li>
+            <li>Community support and available libraries</li>
+            <li>Learning curve and educational value</li>
+            <li>Integration capabilities with other technologies</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <h2>Core Languages</h2>
+        
+        <div class="language-card">
+            <h3>Python</h3>
+            <div class="language-details">
+                <p><strong>Primary Use:</strong> AI/ML development, data science, web development</p>
+                <p><strong>Key Libraries:</strong> TensorFlow, PyTorch, scikit-learn, pandas</p>
+                <p><strong>Example Code:</strong></p>
+                <pre><code># Simple Neural Network using TensorFlow
+import tensorflow as tf
+
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dense(10, activation='softmax')
+])
+
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])</code></pre>
+            </div>
+        </div>
+
+        <div class="language-card">
+            <h3>Java</h3>
+            <div class="language-details">
+                <p><strong>Primary Use:</strong> Enterprise applications, Android development</p>
+                <p><strong>Key Libraries:</strong> DL4J, Weka, JavaML</p>
+                <p><strong>Example Code:</strong></p>
+                <pre><code>// Basic Machine Learning Pipeline
+import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
+import org.nd4j.linalg.activations.Activation;
+
+MultiLayerNetwork model = new MultiLayerNetwork.Builder()
+    .seed(123)
+    .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
+    .iterations(1)
+    .learningRate(0.01)
+    .list()
+    .layer(0, new DenseLayer.Builder().nIn(numInputs).nOut(100)
+        .activation(Activation.RELU).build())
+    .layer(1, new OutputLayer.Builder().nIn(100).nOut(numOutputs)
+        .activation(Activation.SOFTMAX).build())
+    .build();</code></pre>
+            </div>
+        </div>
+
+        <div class="language-card">
+            <h3>R</h3>
+            <div class="language-details">
+                <p><strong>Primary Use:</strong> Statistical analysis, data visualization</p>
+                <p><strong>Key Libraries:</strong> caret, randomForest, ggplot2</p>
+                <p><strong>Example Code:</strong></p>
+                <pre><code># Linear Regression Example
+library(caret)
+
+# Load and prepare data
+data(mtcars)
+model <- train(mpg ~ ., data = mtcars, 
+               method = "lm",
+               trControl = trainControl(method = "cv", number = 5))
+
+# Make predictions
+predictions <- predict(model, newdata = mtcars)</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Web Technologies</h2>
+        
+        <div class="language-card">
+            <h3>HTML/CSS/JavaScript</h3>
+            <div class="language-details">
+                <p><strong>Primary Use:</strong> Frontend development, web interfaces</p>
+                <p><strong>Key Libraries:</strong> React, TensorFlow.js, D3.js</p>
+                <p><strong>Example Code:</strong></p>
+                <pre><code>// TensorFlow.js Example
+import * as tf from '@tensorflow/tfjs';
+
+// Create a simple neural network
+const model = tf.sequential();
+model.add(tf.layers.dense({
+    units: 1,
+    inputShape: [1]
+}));
+
+// Compile the model
+model.compile({
+    loss: 'meanSquaredError',
+    optimizer: 'sgd'
+});</code></pre>
+            </div>
+        </div>
+
+        <div class="language-card">
+            <h3>PHP</h3>
+            <div class="language-details">
+                <p><strong>Primary Use:</strong> Backend development, server-side scripting</p>
+                <p><strong>Key Libraries:</strong> PHP-ML, TensorFlow for PHP</p>
+                <p><strong>Example Code:</strong></p>
+                <pre><code>// PHP-ML Example
+use Phpml\Classification\SVC;
+use Phpml\SupportVectorMachine\Kernel;
+
+$classifier = new SVC(
+    Kernel::RBF, // RBF kernel
+    $cost = 1.0, // C parameter
+    $degree = 3,
+    $gamma = null,
+    $coef0 = 0.0,
+    $tolerance = 0.001,
+    $cacheSize = 100,
+    $shrinking = true,
+    $probabilityEstimates = false
+);</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <h2>Database Technologies</h2>
+        
+        <div class="language-card">
+            <h3>SQL</h3>
+            <div class="language-details">
+                <p><strong>Primary Use:</strong> Data storage and retrieval</p>
+                <p><strong>Key Features:</strong> Data integrity, relationships, transactions</p>
+                <p><strong>Example Code:</strong></p>
+                <pre><code>-- AI Model Results Storage
+CREATE TABLE model_predictions (
+    id SERIAL PRIMARY KEY,
+    model_name VARCHAR(100),
+    input_data JSONB,
+    prediction_result JSONB,
+    confidence_score FLOAT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Query for model performance
+SELECT 
+    model_name,
+    AVG(confidence_score) as avg_confidence,
+    COUNT(*) as total_predictions
+FROM model_predictions
+GROUP BY model_name
+ORDER BY avg_confidence DESC;</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Language Selection Rationale</h2>
+        <div class="rationale-grid">
+            <div class="rationale-card">
+                <h3>Primary Focus</h3>
+                <p>Python serves as our primary language due to its extensive AI/ML ecosystem and gentle learning curve.</p>
+            </div>
+            <div class="rationale-card">
+                <h3>Enterprise Integration</h3>
+                <p>Java provides robust enterprise integration capabilities and Android development opportunities.</p>
+            </div>
+            <div class="rationale-card">
+                <h3>Statistical Analysis</h3>
+                <p>R offers powerful statistical analysis and visualization tools for data science.</p>
+            </div>
+            <div class="rationale-card">
+                <h3>Web Development</h3>
+                <p>HTML/CSS/JavaScript and PHP enable full-stack web development for AI applications.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

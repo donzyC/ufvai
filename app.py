@@ -58,6 +58,10 @@ def interface():
 def programming():
     return render_template('programming.html')
 
+@app.route('/programming-languages')
+def programming_languages():
+    return render_template('programming-languages.html')
+
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'GET':

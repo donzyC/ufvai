@@ -195,4 +195,438 @@
         width: 100%;
         margin-bottom: 1rem;
     }
+}
+
+/* Programming Languages Page Styles */
+.language-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.language-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.language-details {
+    margin-top: 1rem;
+}
+
+.language-details p {
+    margin-bottom: 1rem;
+}
+
+.language-details pre {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.language-details code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+
+.rationale-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.rationale-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.rationale-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Algorithm Development Page Styles */
+.algorithm-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.algorithm-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.algorithm-details {
+    margin-top: 1rem;
+}
+
+.algorithm-details h4 {
+    color: #3498db;
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.algorithm-details ol, 
+.algorithm-details ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.algorithm-details li {
+    margin-bottom: 0.5rem;
+}
+
+.algorithm-details pre {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem 0;
+    border-left: 4px solid #3498db;
+}
+
+.algorithm-details code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Interface Design Page Styles */
+.interface-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.interface-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.interface-card:hover {
+    transform: translateY(-5px);
+}
+
+.interface-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.interface-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.mockup-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.mockup-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mockup-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.mockup-image {
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.mockup-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mockup-description {
+    margin-top: 1.5rem;
+}
+
+.mockup-description p {
+    margin-bottom: 1rem;
+}
+
+.mockup-description ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mockup-description li {
+    margin-bottom: 0.5rem;
+}
+
+.testing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testing-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.testing-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.testing-details p {
+    margin-bottom: 1rem;
+}
+
+.testing-details ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.testing-details li {
+    margin-bottom: 0.5rem;
+}
+
+.assignment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.assignment-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.assignment-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.assignment-details p {
+    margin-bottom: 1rem;
+}
+
+.assignment-details h4 {
+    color: #3498db;
+    margin: 1rem 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.assignment-details ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.assignment-details li {
+    margin-bottom: 0.5rem;
+}
+
+/* Intranet Integration Page Styles */
+.integration-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.integration-details {
+    margin-top: 1.5rem;
+}
+
+.integration-details ol,
+.integration-details ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.integration-details li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.architecture-diagram {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.architecture-diagram img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.access-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.access-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.access-card:hover {
+    transform: translateY(-5px);
+}
+
+.access-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.access-details {
+    color: #666;
+}
+
+.access-details ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.access-details li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.guest-access-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.guest-access-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.guest-access-details {
+    color: #666;
+}
+
+.guest-access-details ol,
+.guest-access-details ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.guest-access-details li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.timeline-container {
+    margin: 3rem 0;
+    position: relative;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #e0e0e0;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+    width: 100%;
+}
+
+.timeline-date {
+    background: #2c3e50;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.timeline-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 2rem;
+}
+
+.timeline-content h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.timeline-content ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.timeline-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .access-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-container::before {
+        left: 0;
+    }
+    
+    .timeline-content {
+        margin-left: 1.5rem;
+    }
 } 

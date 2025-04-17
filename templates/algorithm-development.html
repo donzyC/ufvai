@@ -1,0 +1,501 @@
+{% extends "base.html" %}
+
+{% block title %}Algorithm Development{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1>Algorithm Development</h1>
+        <p>Building algorithms in natural language and pseudo code for AI applications</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <h2>Natural Language Algorithm Development</h2>
+        <p>Our approach to algorithm development starts with clear, natural language descriptions before moving to implementation. This helps students understand the problem-solving process before diving into code.</p>
+        
+        <div class="algorithm-card">
+            <h3>Image Classification Algorithm</h3>
+            <div class="algorithm-details">
+                <h4>Natural Language Description:</h4>
+                <ol>
+                    <li>Start with a dataset of labeled images</li>
+                    <li>Preprocess each image to a standard size and format</li>
+                    <li>Split the dataset into training and testing sets</li>
+                    <li>Initialize a neural network with appropriate layers</li>
+                    <li>Train the network on the training data</li>
+                    <li>Evaluate the model on the testing data</li>
+                    <li>Adjust hyperparameters if needed</li>
+                    <li>Deploy the model for new image classification</li>
+                </ol>
+                
+                <h4>Pseudo Code:</h4>
+                <pre><code>FUNCTION TrainImageClassifier(dataset, labels)
+    // Preprocess data
+    processed_data = PreprocessImages(dataset)
+    
+    // Split data
+    (train_data, test_data, train_labels, test_labels) = SplitData(processed_data, labels, ratio=0.8)
+    
+    // Initialize model
+    model = CreateNeuralNetwork(
+        input_size = image_dimensions,
+        hidden_layers = [128, 64, 32],
+        output_size = number_of_classes
+    )
+    
+    // Training loop
+    FOR epoch = 1 TO max_epochs
+        FOR batch IN train_data
+            // Forward pass
+            predictions = model.ForwardPass(batch)
+            
+            // Calculate loss
+            loss = CalculateLoss(predictions, batch_labels)
+            
+            // Backward pass
+            gradients = model.BackwardPass(loss)
+            
+            // Update weights
+            model.UpdateWeights(gradients, learning_rate)
+        END FOR
+        
+        // Evaluate on validation set
+        IF epoch MOD validation_frequency == 0
+            accuracy = EvaluateModel(model, validation_data, validation_labels)
+            PRINT "Epoch", epoch, "Accuracy:", accuracy
+        END IF
+    END FOR
+    
+    // Final evaluation
+    final_accuracy = EvaluateModel(model, test_data, test_labels)
+    PRINT "Final Test Accuracy:", final_accuracy
+    
+    RETURN model
+END FUNCTION</code></pre>
+            </div>
+        </div>
+        
+        <div class="algorithm-card">
+            <h3>Natural Language Processing Algorithm</h3>
+            <div class="algorithm-details">
+                <h4>Natural Language Description:</h4>
+                <ol>
+                    <li>Collect a corpus of text documents</li>
+                    <li>Tokenize the text into words or subwords</li>
+                    <li>Create word embeddings for each token</li>
+                    <li>Build a language model architecture</li>
+                    <li>Train the model to predict the next word in a sequence</li>
+                    <li>Fine-tune the model for specific NLP tasks</li>
+                    <li>Evaluate the model's performance</li>
+                    <li>Deploy for text generation or analysis</li>
+                </ol>
+                
+                <h4>Pseudo Code:</h4>
+                <pre><code>FUNCTION BuildLanguageModel(corpus)
+    // Tokenize text
+    tokens = TokenizeText(corpus)
+    
+    // Create vocabulary
+    vocabulary = CreateVocabulary(tokens, min_frequency=5)
+    
+    // Create word embeddings
+    embeddings = InitializeEmbeddings(vocabulary_size, embedding_dim=300)
+    
+    // Initialize transformer model
+    model = CreateTransformerModel(
+        vocab_size = vocabulary_size,
+        embedding_dim = 300,
+        num_layers = 6,
+        num_heads = 8
+    )
+    
+    // Training loop
+    FOR epoch = 1 TO max_epochs
+        FOR sequence IN training_sequences
+            // Create input and target
+            (input_sequence, target_word) = CreateSequencePairs(sequence)
+            
+            // Forward pass
+            predictions = model.ForwardPass(input_sequence)
+            
+            // Calculate loss
+            loss = CalculateCrossEntropyLoss(predictions, target_word)
+            
+            // Backward pass
+            gradients = model.BackwardPass(loss)
+            
+            // Update weights
+            model.UpdateWeights(gradients, learning_rate)
+        END FOR
+        
+        // Evaluate perplexity
+        perplexity = EvaluatePerplexity(model, validation_sequences)
+        PRINT "Epoch", epoch, "Perplexity:", perplexity
+    END FOR
+    
+    RETURN model
+END FUNCTION</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <h2>Conditional Operations in AI Algorithms</h2>
+        <p>Conditional operations are essential in AI algorithms for decision-making, branching logic, and handling different scenarios. Here are examples of how we use conditionals in our algorithms:</p>
+        
+        <div class="algorithm-card">
+            <h3>Decision Tree Algorithm</h3>
+            <div class="algorithm-details">
+                <h4>Natural Language Description:</h4>
+                <ol>
+                    <li>Start with a dataset of features and labels</li>
+                    <li>Calculate information gain for each feature</li>
+                    <li>Select the feature with highest information gain</li>
+                    <li>Split the data based on this feature</li>
+                    <li>Recursively build subtrees for each split</li>
+                    <li>Stop when a stopping criterion is met</li>
+                    <li>Use the tree for classification</li>
+                </ol>
+                
+                <h4>Pseudo Code:</h4>
+                <pre><code>FUNCTION BuildDecisionTree(data, labels, depth=0)
+    // Check stopping criteria
+    IF depth >= max_depth OR IsHomogeneous(labels) OR Size(data) < min_samples
+        leaf_label = MostCommonLabel(labels)
+        RETURN CreateLeafNode(leaf_label)
+    END IF
+    
+    // Find best split
+    best_feature = -1
+    best_threshold = -1
+    best_gain = -1
+    
+    FOR feature IN features
+        FOR threshold IN GetThresholds(data[feature])
+            gain = CalculateInformationGain(data, labels, feature, threshold)
+            
+            IF gain > best_gain
+                best_gain = gain
+                best_feature = feature
+                best_threshold = threshold
+            END IF
+        END FOR
+    END FOR
+    
+    // If no good split found
+    IF best_gain < min_gain
+        leaf_label = MostCommonLabel(labels)
+        RETURN CreateLeafNode(leaf_label)
+    END IF
+    
+    // Split data
+    (left_data, left_labels, right_data, right_labels) = SplitData(
+        data, labels, best_feature, best_threshold
+    )
+    
+    // Create node and subtrees
+    node = CreateNode(best_feature, best_threshold)
+    node.left = BuildDecisionTree(left_data, left_labels, depth + 1)
+    node.right = BuildDecisionTree(right_data, right_labels, depth + 1)
+    
+    RETURN node
+END FUNCTION</code></pre>
+            </div>
+        </div>
+        
+        <div class="algorithm-card">
+            <h3>Reinforcement Learning Algorithm</h3>
+            <div class="algorithm-details">
+                <h4>Natural Language Description:</h4>
+                <ol>
+                    <li>Initialize an environment and an agent</li>
+                    <li>For each episode:</li>
+                    <li>  a. Observe the current state</li>
+                    <li>  b. Choose an action based on the current policy</li>
+                    <li>  c. Execute the action and observe the reward and next state</li>
+                    <li>  d. Update the policy based on the reward</li>
+                    <li>  e. Repeat until the episode ends</li>
+                    <li>Evaluate the agent's performance</li>
+                </ol>
+                
+                <h4>Pseudo Code:</h4>
+                <pre><code>FUNCTION QLearning(environment, num_episodes)
+    // Initialize Q-table
+    Q = InitializeQTable(state_size, action_size)
+    
+    // Learning parameters
+    learning_rate = 0.1
+    discount_factor = 0.95
+    epsilon = 0.1  // Exploration rate
+    
+    FOR episode = 1 TO num_episodes
+        // Reset environment
+        state = environment.Reset()
+        done = FALSE
+        total_reward = 0
+        
+        WHILE NOT done
+            // Choose action (epsilon-greedy)
+            IF Random() < epsilon
+                action = RandomAction(action_size)
+            ELSE
+                action = ArgMax(Q[state])
+            END IF
+            
+            // Take action
+            next_state, reward, done = environment.Step(action)
+            
+            // Update Q-value
+            old_value = Q[state, action]
+            next_max = Max(Q[next_state])
+            
+            // Q-learning formula
+            new_value = (1 - learning_rate) * old_value + 
+                        learning_rate * (reward + discount_factor * next_max)
+            
+            Q[state, action] = new_value
+            
+            // Update state and total reward
+            state = next_state
+            total_reward = total_reward + reward
+        END WHILE
+        
+        // Print episode results
+        PRINT "Episode", episode, "Total Reward:", total_reward
+        
+        // Decay epsilon
+        epsilon = epsilon * 0.995
+    END FOR
+    
+    RETURN Q
+END FUNCTION</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>User Input Processing</h2>
+        <p>Our algorithms are designed to handle various types of user input, from text to images to structured data. Here's how we process different types of input:</p>
+        
+        <div class="algorithm-card">
+            <h3>Text Input Processing</h3>
+            <div class="algorithm-details">
+                <h4>Natural Language Description:</h4>
+                <ol>
+                    <li>Receive text input from the user</li>
+                    <li>Clean and normalize the text</li>
+                    <li>Tokenize the text into words or subwords</li>
+                    <li>Convert tokens to numerical representations</li>
+                    <li>Process through the AI model</li>
+                    <li>Generate appropriate response</li>
+                    <li>Format and return the response to the user</li>
+                </ol>
+                
+                <h4>Pseudo Code:</h4>
+                <pre><code>FUNCTION ProcessTextInput(user_input)
+    // Clean and normalize text
+    cleaned_text = CleanText(user_input)
+    
+    // Tokenize
+    tokens = Tokenize(cleaned_text)
+    
+    // Convert to numerical representation
+    input_ids = ConvertToIds(tokens, vocabulary)
+    
+    // Add special tokens
+    input_ids = AddSpecialTokens(input_ids)
+    
+    // Create attention mask
+    attention_mask = CreateAttentionMask(input_ids)
+    
+    // Process through model
+    model_output = model.ForwardPass(input_ids, attention_mask)
+    
+    // Generate response
+    response_ids = GenerateResponse(model_output)
+    
+    // Convert back to text
+    response_text = ConvertToText(response_ids, vocabulary)
+    
+    // Format response
+    formatted_response = FormatResponse(response_text)
+    
+    RETURN formatted_response
+END FUNCTION</code></pre>
+            </div>
+        </div>
+        
+        <div class="algorithm-card">
+            <h3>Image Input Processing</h3>
+            <div class="algorithm-details">
+                <h4>Natural Language Description:</h4>
+                <ol>
+                    <li>Receive image input from the user</li>
+                    <li>Validate the image format and size</li>
+                    <li>Resize the image to standard dimensions</li>
+                    <li>Normalize pixel values</li>
+                    <li>Apply any necessary preprocessing</li>
+                    <li>Process through the AI model</li>
+                    <li>Generate appropriate response</li>
+                    <li>Format and return the response to the user</li>
+                </ol>
+                
+                <h4>Pseudo Code:</h4>
+                <pre><code>FUNCTION ProcessImageInput(image_data)
+    // Validate image
+    IF NOT IsValidImage(image_data)
+        RETURN "Error: Invalid image format"
+    END IF
+    
+    // Resize image
+    resized_image = ResizeImage(image_data, width=224, height=224)
+    
+    // Convert to RGB if needed
+    IF GetChannels(resized_image) != 3
+        resized_image = ConvertToRGB(resized_image)
+    END IF
+    
+    // Normalize pixel values
+    normalized_image = NormalizePixels(resized_image, mean=[0.485, 0.456, 0.406], 
+                                      std=[0.229, 0.224, 0.225])
+    
+    // Convert to tensor
+    image_tensor = ConvertToTensor(normalized_image)
+    
+    // Add batch dimension
+    image_tensor = AddBatchDimension(image_tensor)
+    
+    // Process through model
+    model_output = model.ForwardPass(image_tensor)
+    
+    // Get prediction
+    prediction = GetPrediction(model_output)
+    
+    // Get confidence score
+    confidence = GetConfidence(model_output, prediction)
+    
+    // Format response
+    response = FormatImageResponse(prediction, confidence)
+    
+    RETURN response
+END FUNCTION</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <h2>Algorithm Efficiency Analysis</h2>
+        <p>We teach students to analyze the efficiency of algorithms using Big O notation and other performance metrics. This helps them understand the trade-offs between different approaches.</p>
+        
+        <div class="algorithm-card">
+            <h3>Time Complexity Analysis</h3>
+            <div class="algorithm-details">
+                <h4>Common Time Complexities in AI:</h4>
+                <ul>
+                    <li><strong>O(1)</strong> - Constant time operations (e.g., accessing an array element)</li>
+                    <li><strong>O(log n)</strong> - Logarithmic time (e.g., binary search)</li>
+                    <li><strong>O(n)</strong> - Linear time (e.g., traversing an array)</li>
+                    <li><strong>O(n log n)</strong> - Linearithmic time (e.g., efficient sorting algorithms)</li>
+                    <li><strong>O(n²)</strong> - Quadratic time (e.g., bubble sort)</li>
+                    <li><strong>O(2ⁿ)</strong> - Exponential time (e.g., recursive Fibonacci)</li>
+                    <li><strong>O(n!)</strong> - Factorial time (e.g., traveling salesman problem)</li>
+                </ul>
+                
+                <h4>Example Analysis:</h4>
+                <pre><code>// Algorithm: Linear Search
+FUNCTION LinearSearch(array, target)
+    FOR i = 1 TO Length(array)
+        IF array[i] == target
+            RETURN i
+        END IF
+    END FOR
+    RETURN -1
+END FUNCTION
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+// Algorithm: Binary Search
+FUNCTION BinarySearch(array, target)
+    left = 1
+    right = Length(array)
+    
+    WHILE left <= right
+        mid = (left + right) / 2
+        
+        IF array[mid] == target
+            RETURN mid
+        ELSE IF array[mid] < target
+            left = mid + 1
+        ELSE
+            right = mid - 1
+        END IF
+    END WHILE
+    
+    RETURN -1
+END FUNCTION
+
+// Time Complexity: O(log n)
+// Space Complexity: O(1)</code></pre>
+            </div>
+        </div>
+        
+        <div class="algorithm-card">
+            <h3>Space Complexity Analysis</h3>
+            <div class="algorithm-details">
+                <h4>Common Space Complexities in AI:</h4>
+                <ul>
+                    <li><strong>O(1)</strong> - Constant space (e.g., in-place algorithms)</li>
+                    <li><strong>O(n)</strong> - Linear space (e.g., storing input data)</li>
+                    <li><strong>O(n²)</strong> - Quadratic space (e.g., adjacency matrix)</li>
+                    <li><strong>O(2ⁿ)</strong> - Exponential space (e.g., storing all subsets)</li>
+                </ul>
+                
+                <h4>Example Analysis:</h4>
+                <pre><code>// Algorithm: Creating a copy of an array
+FUNCTION CopyArray(array)
+    new_array = CreateArray(Length(array))
+    
+    FOR i = 1 TO Length(array)
+        new_array[i] = array[i]
+    END FOR
+    
+    RETURN new_array
+END FUNCTION
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+// Algorithm: In-place array reversal
+FUNCTION ReverseArray(array)
+    left = 1
+    right = Length(array)
+    
+    WHILE left < right
+        // Swap elements
+        temp = array[left]
+        array[left] = array[right]
+        array[right] = temp
+        
+        left = left + 1
+        right = right - 1
+    END WHILE
+    
+    RETURN array
+END FUNCTION
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

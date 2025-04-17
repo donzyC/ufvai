@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+
+{% block title %}Interface Design & Testing{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1>Interface Design & Testing</h1>
+        <p>Creating intuitive, accessible, and responsive interfaces for AI applications</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <h2>Interface Design Principles</h2>
+        <p>Our approach to interface design follows these key principles to ensure a positive user experience across all platforms:</p>
+        
+        <div class="interface-grid">
+            <div class="interface-card">
+                <div class="interface-icon">🎯</div>
+                <h3>User-Centered Design</h3>
+                <p>We prioritize user needs and preferences throughout the design process, ensuring interfaces are intuitive and accessible.</p>
+            </div>
+            
+            <div class="interface-card">
+                <div class="interface-icon">📱</div>
+                <h3>Responsive Design</h3>
+                <p>All interfaces adapt seamlessly to different screen sizes and devices, from smartphones to desktop computers.</p>
+            </div>
+            
+            <div class="interface-card">
+                <div class="interface-icon">🎨</div>
+                <h3>Consistent Visual Language</h3>
+                <p>We maintain a consistent visual language across all interfaces to create a cohesive user experience.</p>
+            </div>
+            
+            <div class="interface-card">
+                <div class="interface-icon">⚡</div>
+                <h3>Performance Optimization</h3>
+                <p>Interfaces are optimized for speed and efficiency, ensuring smooth interactions even with complex AI operations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <h2>Interface Mockups</h2>
+        <p>Below are mockups of key interfaces for our AI programming platform:</p>
+        
+        <div class="mockup-container">
+            <div class="mockup-card">
+                <h3>Student Dashboard</h3>
+                <div class="mockup-image">
+                    <img src="{{ url_for('static', filename='images/mockups/student-dashboard.png') }}" alt="Student Dashboard Mockup">
+                </div>
+                <div class="mockup-description">
+                    <p>The student dashboard provides a central hub for accessing courses, tracking progress, and managing assignments.</p>
+                    <ul>
+                        <li>Progress tracking with visual indicators</li>
+                        <li>Quick access to current courses and assignments</li>
+                        <li>Resource library with search functionality</li>
+                        <li>Calendar integration for deadlines and events</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mockup-card">
+                <h3>Code Editor Interface</h3>
+                <div class="mockup-image">
+                    <img src="{{ url_for('static', filename='images/mockups/code-editor.png') }}" alt="Code Editor Interface Mockup">
+                </div>
+                <div class="mockup-description">
+                    <p>Our integrated code editor provides a powerful environment for AI programming with helpful features.</p>
+                    <ul>
+                        <li>Syntax highlighting for multiple languages</li>
+                        <li>AI-powered code completion and suggestions</li>
+                        <li>Integrated terminal for command execution</li>
+                        <li>Real-time collaboration capabilities</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mockup-card">
+                <h3>AI Model Training Interface</h3>
+                <div class="mockup-image">
+                    <img src="{{ url_for('static', filename='images/mockups/model-training.png') }}" alt="AI Model Training Interface Mockup">
+                </div>
+                <div class="mockup-description">
+                    <p>The model training interface allows students to configure, train, and evaluate AI models with visual feedback.</p>
+                    <ul>
+                        <li>Drag-and-drop model architecture builder</li>
+                        <li>Real-time training visualization</li>
+                        <li>Hyperparameter tuning controls</li>
+                        <li>Model performance metrics and comparisons</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Testing Strategies</h2>
+        <p>We employ a comprehensive testing strategy to ensure our interfaces meet high standards of usability, accessibility, and performance:</p>
+        
+        <div class="testing-grid">
+            <div class="testing-card">
+                <h3>Usability Testing</h3>
+                <div class="testing-details">
+                    <p>We conduct regular usability testing with actual students to identify pain points and areas for improvement.</p>
+                    <ul>
+                        <li>Task-based testing scenarios</li>
+                        <li>Think-aloud protocols</li>
+                        <li>Heatmap and click tracking</li>
+                        <li>User satisfaction surveys</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="testing-card">
+                <h3>Accessibility Testing</h3>
+                <div class="testing-details">
+                    <p>All interfaces are tested for compliance with WCAG 2.1 standards to ensure accessibility for all users.</p>
+                    <ul>
+                        <li>Screen reader compatibility</li>
+                        <li>Keyboard navigation testing</li>
+                        <li>Color contrast verification</li>
+                        <li>Alternative text for images</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="testing-card">
+                <h3>Performance Testing</h3>
+                <div class="testing-details">
+                    <p>We conduct thorough performance testing to ensure interfaces remain responsive under various conditions.</p>
+                    <ul>
+                        <li>Load time optimization</li>
+                        <li>Resource usage monitoring</li>
+                        <li>Cross-browser compatibility</li>
+                        <li>Mobile device performance</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="testing-card">
+                <h3>A/B Testing</h3>
+                <div class="testing-details">
+                    <p>We use A/B testing to compare different interface designs and features to determine which performs better.</p>
+                    <ul>
+                        <li>Hypothesis-driven experiments</li>
+                        <li>Statistical significance analysis</li>
+                        <li>User behavior tracking</li>
+                        <li>Iterative design improvements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light">
+    <div class="container">
+        <h2>Assignment Examples</h2>
+        <p>Our interface design assignments challenge students to create intuitive and effective interfaces for AI applications:</p>
+        
+        <div class="assignment-grid">
+            <div class="assignment-card">
+                <h3>AI Chatbot Interface</h3>
+                <div class="assignment-details">
+                    <p>Design a user interface for an AI chatbot that can answer questions about AI concepts and programming.</p>
+                    <h4>Requirements:</h4>
+                    <ul>
+                        <li>Clear conversation history display</li>
+                        <li>Intuitive input mechanism</li>
+                        <li>Visual indicators for AI thinking/processing</li>
+                        <li>Accessibility features for screen readers</li>
+                        <li>Responsive design for mobile devices</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="assignment-card">
+                <h3>Data Visualization Dashboard</h3>
+                <div class="assignment-details">
+                    <p>Create a dashboard interface for visualizing AI model performance metrics and data analysis results.</p>
+                    <h4>Requirements:</h4>
+                    <ul>
+                        <li>Interactive charts and graphs</li>
+                        <li>Filtering and sorting capabilities</li>
+                        <li>Export functionality for reports</li>
+                        <li>Customizable layout options</li>
+                        <li>Real-time data updates</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="assignment-card">
+                <h3>AI Model Configuration Interface</h3>
+                <div class="assignment-details">
+                    <p>Design an interface for configuring and customizing AI model parameters and architectures.</p>
+                    <h4>Requirements:</h4>
+                    <ul>
+                        <li>Visual model architecture builder</li>
+                        <li>Parameter adjustment controls</li>
+                        <li>Validation and error messaging</li>
+                        <li>Save and load configuration options</li>
+                        <li>Performance impact indicators</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 
