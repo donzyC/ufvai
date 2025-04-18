@@ -81,6 +81,8 @@
     color: #1F2937;
     margin-bottom: 2rem;
     text-align: center;
+    position: relative;
+    padding-bottom: 2rem;
 }
 
 /* Buttons */
@@ -862,4 +864,33 @@
 
 #mobile-menu.show {
     display: block;
+}
+
+/* Bouncing Arrow Styles */
+.bounce-arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.bounce-arrow:hover {
+    color: var(--secondary-color);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
 } 

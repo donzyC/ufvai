@@ -170,4 +170,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Animate timeline items
     animateTimeline();
+});
+
+// Bouncing arrow functionality
+document.querySelectorAll('.bounce-arrow').forEach(arrow => {
+    arrow.addEventListener('click', function() {
+        const section = this.closest('section');
+        const nextSection = section.nextElementSibling;
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
 }); 
