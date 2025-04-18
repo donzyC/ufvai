@@ -877,10 +877,21 @@
     animation: bounce 2s infinite;
     cursor: pointer;
     transition: color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards, bounce 2s infinite 0.5s;
 }
 
 .bounce-arrow:hover {
     color: var(--secondary-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes bounce {
